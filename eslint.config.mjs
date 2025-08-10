@@ -18,11 +18,12 @@ const eslintConfig = [
       prettier: prettier,
     },
     rules: {
+      semi: ['error', 'never'],
       quotes: ['error', 'single', { avoidEscape: true }],
       'prettier/prettier': [
         'error',
         {
-          semi: true,
+          semi: false,
           singleQuote: true,
           jsxSingleQuote: true,
         },
