@@ -9,7 +9,7 @@ import {
   PieChart,
   Calendar,
   Bell,
-} from 'lucide-react';
+} from 'lucide-react'
 
 const UserDashboard = () => {
   const stats = [
@@ -41,7 +41,7 @@ const UserDashboard = () => {
       trend: 'up',
       icon: Activity,
     },
-  ];
+  ]
 
   const recentActivity = [
     {
@@ -79,7 +79,7 @@ const UserDashboard = () => {
       time: '25 minutes ago',
       type: 'upgrade',
     },
-  ];
+  ]
 
   return (
     <div className='space-y-6'>
@@ -232,7 +232,7 @@ const UserDashboard = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default UserDashboard;
+export default UserDashboard

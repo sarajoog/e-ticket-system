@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   Home,
   LayoutDashboard,
@@ -8,12 +8,12 @@ import {
   Sparkles,
   Info,
   MessageCircle,
-} from 'lucide-react';
-import ThemeSwitch from '@/components/theme-switch';
-import { useUser } from '@clerk/nextjs';
+} from 'lucide-react'
+import ThemeSwitch from '@/components/theme-switch'
+import { useUser } from '@clerk/nextjs'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  const { isSignedIn } = useUser();
+  const { isSignedIn } = useUser()
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-purple-900'>
       {/* Animated background elements */}
@@ -161,5 +161,5 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

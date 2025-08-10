@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Mail,
   Phone,
@@ -11,10 +11,10 @@ import {
   Award,
   Clock,
   TrendingUp,
-} from 'lucide-react';
+} from 'lucide-react'
 
 export default function UserAccount() {
-  console.log('UserAccount component rendered');
+  console.log('UserAccount component rendered')
   const userInfo = {
     name: 'Alex Johnson',
     email: 'alex.johnson@email.com',
@@ -24,7 +24,7 @@ export default function UserAccount() {
     avatar: '/api/placeholder/100/100',
     role: 'Premium Member',
     verified: true,
-  };
+  }
 
   const accountStats = [
     {
@@ -51,7 +51,7 @@ export default function UserAccount() {
       icon: Clock,
       color: 'text-orange-600',
     },
-  ];
+  ]
 
   const recentOrders = [
     {
@@ -82,7 +82,7 @@ export default function UserAccount() {
       status: 'Expired',
       amount: '$49.99',
     },
-  ];
+  ]
 
   const preferences = [
     {
@@ -101,7 +101,7 @@ export default function UserAccount() {
       enabled: true,
     },
     { category: 'Marketing', setting: 'Promotional emails', enabled: false },
-  ];
+  ]
 
   return (
     <div className='space-y-8'>
@@ -282,5 +282,5 @@ export default function UserAccount() {
         </div>
       </div>
     </div>
-  );
+  )
 }
