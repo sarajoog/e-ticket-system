@@ -2,6 +2,7 @@ import { db } from '@/lib/db/firebaseAdmin'
 import { verifyWebhook } from '@clerk/nextjs/webhooks'
 import { NextRequest, NextResponse } from 'next/server'
 import { inngest } from '@/lib/inngest/client'
+import { sendMail } from '@/utils/mailer'
 
 export async function POST(req: NextRequest) {
   let evt
@@ -38,11 +39,20 @@ export async function POST(req: NextRequest) {
       await db.collection('users').doc(user.id).set(userData)
 
       // ✅ Trigger Inngest function
+      /*
       await inngest.send({
         name: 'user/signup',
         data: userData.email,
       })
-
+      */
+      const subject = 'Welcome to E-Ticket System!'
+      const message = `Hi 
+                 \n\n
+                 Thanks for signing up. We are happy to have you onboard!
+               `
+      if (userData.email) {
+        await sendMail(userData.email, subject, message)
+      }
       console.log('✅ User saved to Firestore and Inngest function triggered')
     }
   } catch (err) {
