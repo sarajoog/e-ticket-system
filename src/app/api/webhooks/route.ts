@@ -1,7 +1,6 @@
 import { db } from '@/lib/db/firebaseAdmin'
 import { verifyWebhook } from '@clerk/nextjs/webhooks'
 import { NextRequest, NextResponse } from 'next/server'
-import { inngest } from '@/lib/inngest/client'
 import { sendMail } from '@/utils/mailer'
 
 export async function POST(req: NextRequest) {
